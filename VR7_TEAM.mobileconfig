@@ -11,16 +11,16 @@
   <integer>1</integer>
 
   <key>PayloadIdentifier</key>
-  <string>com.vr7ios.profile</string>
+  <string>com.vr7ios.appprofile</string>
 
   <key>PayloadUUID</key>
-  <string>F1A2B3C4-D5E6-7890-ABCD-123456789000</string>
+  <string>F9A1B2C3-D4E5-6789-ABCD-987654321000</string>
 
   <key>PayloadDisplayName</key>
-  <string>VR7 Profile</string>
+  <string>VR7 APP</string>
 
   <key>PayloadDescription</key>
-  <string>Installs VR7 Web App</string>
+  <string>Install VR7 Web App</string>
 
   <key>PayloadOrganization</key>
   <string>VR7</string>
@@ -38,16 +38,16 @@
       <string>com.vr7ios.webclip</string>
 
       <key>PayloadUUID</key>
-      <string>A1B2C3D4-E5F6-7890-ABCD-123456789111</string>
+      <string>A9B8C7D6-E5F4-3210-ABCD-123123123999</string>
 
       <key>PayloadDisplayName</key>
-      <string>VR7</string>
+      <string>VR7 APP</string>
 
       <key>Label</key>
-      <string>VR7</string>
+      <string>VR7 APP</string>
 
       <key>URL</key>
-      <string>https://vr7teams.netlify.app</string>
+      <string>https://vr7teamios.netlify.app/</string>
 
       <key>FullScreen</key>
       <true/>
@@ -57,6 +57,12 @@
 
       <key>Precomposed</key>
       <true/>
+
+      <key>Icon</key>
+      <data>
+aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTI0MTMxMDUwMTAzNjc1NzAxMy8xNDc4MDYwNzI3MjIxODgzMDUxLzM3OUMzOTczLTlBNjEtNENGNi1CNEFELTZBRENGN0I3QkM0Ni5wbmc/ZXg9NjlhNzA2ZDImaXM9NjlhNWI1NTImaG09ZGY2N2MwMjg3NzQ4MmYxMTAyZDk1MTY4NGJiYzRhZjY2NjE2MGEzMTIwMWEyNTA0YTc5Yjg0Mjk4MTNlMjcxYiY
+      </data>
+
     </dict>
   </array>
 
