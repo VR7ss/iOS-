@@ -1,4 +1,5 @@
 [[redirects]]
   from = "/download"
   to = "/VR7_TEAM.mobileconfig"
-  status = 200
+  status = 302
+  force = true
