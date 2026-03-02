@@ -2,29 +2,63 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
-    <key>PayloadContent</key>
-    <array>
-      <dict>
-        <key>FullScreen</key>
-        <true/>
-        <key>Label</key>
-        <string>VR7</string>
-        <key>PayloadDisplayName</key>
-        <string>VR7</string>
-        <key>PayloadIdentifier</key>
-        <string>com.vr7ios.webclip</string>
-        <key>PayloadType</key>
-        <string>com.apple.webClip.managed</string>
-        <key>PayloadUUID</key>
-        <string>12345678-ABCD-1234-ABCD-123456789ABC</string>
-        <key>PayloadVersion</key>
-        <integer>1</integer>
-        <key>Precomposed</key>
-        <true/>
-        <key>URL</key>
-        <string>https://vr7teams.netlify.app</string>
-        <key>IsRemovable</key>
-        <true/>
-        <key>Icon</key>
-        <data>
+<dict>
+
+  <key>PayloadType</key>
+  <string>Configuration</string>
+
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+
+  <key>PayloadIdentifier</key>
+  <string>com.vr7ios.profile</string>
+
+  <key>PayloadUUID</key>
+  <string>F1A2B3C4-D5E6-7890-ABCD-123456789000</string>
+
+  <key>PayloadDisplayName</key>
+  <string>VR7 Profile</string>
+
+  <key>PayloadDescription</key>
+  <string>Installs VR7 Web App</string>
+
+  <key>PayloadOrganization</key>
+  <string>VR7</string>
+
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.webClip.managed</string>
+
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+
+      <key>PayloadIdentifier</key>
+      <string>com.vr7ios.webclip</string>
+
+      <key>PayloadUUID</key>
+      <string>A1B2C3D4-E5F6-7890-ABCD-123456789111</string>
+
+      <key>PayloadDisplayName</key>
+      <string>VR7</string>
+
+      <key>Label</key>
+      <string>VR7</string>
+
+      <key>URL</key>
+      <string>https://vr7teams.netlify.app</string>
+
+      <key>FullScreen</key>
+      <true/>
+
+      <key>IsRemovable</key>
+      <true/>
+
+      <key>Precomposed</key>
+      <true/>
+    </dict>
+  </array>
+
+</dict>
+</plist>
