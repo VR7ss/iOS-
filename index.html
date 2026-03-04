@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <style>
-.vr7-cinematic-wrapper {
-  text-align: center;
-  margin-bottom: 30px;
-  perspective: 1000px;
-}
-
 .vr7-cinematic-title {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
   font-size: 60px;
   font-weight: 900;
-  letter-spacing: 6px;
-  opacity: 0;
-  transform: translateY(80px) scale(0.8) rotateX(40deg);
-  animation: cinematicEntry 1.8s ease-out forwards,
-             floatUpDown 4s ease-in-out infinite 2s,
-             gradientMove 6s linear infinite;
-  
-  background: linear-gradient(90deg, #ff0000, #ff2a2a, #ff7300, #ff0000);
-  background-size: 300%;
+  z-index: 9999;
+
+  animation: 
+    entry 1.5s ease-out forwards,
+    float 2.5s ease-in-out infinite 1.5s,
+    rainbow 4s linear infinite;
+
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  background-size: 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   text-shadow:
-    0 0 10px rgba(255, 0, 0, 0.8),
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 40px rgba(255, 0, 0, 0.4);
+    0 0 20px rgba(255,0,0,0.9),
+    0 0 40px rgba(255,0,0,0.6),
+    0 0 60px rgba(255,0,0,0.4);
 }
 
-@keyframes cinematicEntry {
+/* دخول قوي */
+@keyframes entry {
   0% {
     opacity: 0;
-    transform: translateY(120px) scale(0.6) rotateX(60deg);
+    transform: translate(-50%, 100px) scale(0.5);
     filter: blur(15px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-10px) scale(1.05) rotateX(0deg);
-    filter: blur(0px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px) scale(1);
+    transform: translate(-50%, 0px) scale(1);
+    filter: blur(0);
   }
 }
 
-@keyframes floatUpDown {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
+/* حركة واضحة فوق تحت */
+@keyframes float {
+  0% { transform: translate(-50%, 0px); }
+  50% { transform: translate(-50%, -25px); }
+  100% { transform: translate(-50%, 0px); }
 }
 
-@keyframes gradientMove {
+/* تغيير ألوان قوي */
+@keyframes rainbow {
   0% { background-position: 0%; }
-  100% { background-position: 300%; }
+  100% { background-position: 400%; }
 }
-
-@media (max-width: 768px) {
-  .vr7-cinematic-title {
-    font-size: 38px;
-    letter-spacing: 3px;
-  }
-}
+</style>
 </style> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
