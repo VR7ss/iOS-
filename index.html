@@ -1,6 +1,86 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
+<style>
+.vr7-title-wrapper{
+  text-align:center;
+  margin-bottom:30px;
+  perspective:1000px;
+}
+
+.vr7-title{
+  display:inline-block;
+  font-size:55px;
+  font-weight:900;
+  position:relative;
+  animation:
+    spin360 8s linear infinite,
+    floatMove 3s ease-in-out infinite,
+    colorShift 5s linear infinite;
+}
+
+/* طبقات القلتش */
+.vr7-title::before,
+.vr7-title::after{
+  content: "✦ VR7 TEAM ✦";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  overflow:hidden;
+}
+
+.vr7-title::before{
+  color:#ff0000;
+  z-index:-1;
+  animation:glitch1 1s infinite linear alternate-reverse;
+}
+
+.vr7-title::after{
+  color:#00ffff;
+  z-index:-2;
+  animation:glitch2 1s infinite linear alternate-reverse;
+}
+
+/* لف 360 */
+@keyframes spin360{
+  0%{transform:rotateY(0deg);}
+  100%{transform:rotateY(360deg);}
+}
+
+/* حركة فوق تحت */
+@keyframes floatMove{
+  0%,100%{transform:rotateY(0deg) translateY(0);}
+  50%{transform:rotateY(180deg) translateY(-20px);}
+}
+
+/* تغيير لون */
+@keyframes colorShift{
+  0%{color:#ff0000;}
+  25%{color:#ff7300;}
+  50%{color:#00ffcc;}
+  75%{color:#ff00ff;}
+  100%{color:#ff0000;}
+}
+
+/* قلتش */
+@keyframes glitch1{
+  0%{transform:translate(0);}
+  20%{transform:translate(-2px,2px);}
+  40%{transform:translate(-2px,-2px);}
+  60%{transform:translate(2px,2px);}
+  80%{transform:translate(2px,-2px);}
+  100%{transform:translate(0);}
+}
+
+@keyframes glitch2{
+  0%{transform:translate(0);}
+  20%{transform:translate(2px,-2px);}
+  40%{transform:translate(2px,2px);}
+  60%{transform:translate(-2px,-2px);}
+  80%{transform:translate(-2px,2px);}
+  100%{transform:translate(0);}
+}
+</style> <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VR7 TEAM</title>
@@ -12,6 +92,9 @@
 </head>
 
 <body>
+  <div class="vr7-title-wrapper">
+  <div class="vr7-title">✦ VR7 TEAM ✦</div>
+</div>
 
 <nav class="navbar" id="navbar">
   <div class="nav-container">
