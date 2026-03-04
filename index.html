@@ -1,6 +1,68 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
+<style>
+.vr7-cinematic-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+  perspective: 1000px;
+}
+
+.vr7-cinematic-title {
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  opacity: 0;
+  transform: translateY(80px) scale(0.8) rotateX(40deg);
+  animation: cinematicEntry 1.8s ease-out forwards,
+             floatUpDown 4s ease-in-out infinite 2s,
+             gradientMove 6s linear infinite;
+  
+  background: linear-gradient(90deg, #ff0000, #ff2a2a, #ff7300, #ff0000);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.6),
+    0 0 40px rgba(255, 0, 0, 0.4);
+}
+
+@keyframes cinematicEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(120px) scale(0.6) rotateX(60deg);
+    filter: blur(15px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05) rotateX(0deg);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+@media (max-width: 768px) {
+  .vr7-cinematic-title {
+    font-size: 38px;
+    letter-spacing: 3px;
+  }
+}
+</style> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR7 iOS</title>
