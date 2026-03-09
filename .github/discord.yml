@@ -18,4 +18,4 @@ jobs:
               "color": 5814783
             }]
           }' \
-          https://discord.com/api/webhooks/1445137851426799762/feeT-Osu_BQ0gpcHrHyiETsYzVrnZM6iYu7NoKoxl9ors5pCLdjiGvZFqXQdgEA4wTa0
+          https://discord.com/api/webhooks/1445137851426799762/feeT-Osu_BQ0gpcHrHyiETsYzVrnZM6iYu7NoKoxl9ors5pCLdjiGvZFqXQdgEA4wTa0/github
