@@ -1,0 +1,21 @@
+name: Discord Commit Notification
+
+on: [push]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send message to Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{
+            "username": "GitHub",
+            "embeds": [{
+              "title": "📦 New Commit",
+              "description": "New update pushed to repository",
+              "color": 5814783
+            }]
+          }' \
+          https://discord.com/api/webhooks/1445137851426799762/feeT-Osu_BQ0gpcHrHyiETsYzVrnZM6iYu7NoKoxl9ors5pCLdjiGvZFqXQdgEA4wTa0
