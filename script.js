@@ -39,7 +39,7 @@
   const time = Math.floor(Date.now() / 1000);
   const discordTime = `<t:${time}:f>`;
 
-  fetch("https://discord.com/api/webhooks/1391131296801099776/wkdtMc4ye4klcM9bK6JP0FpXD5VGamU7x9IiPDFDR6vzT0ORRtTUhSXgevV4iJgKE_QY", {
+  fetch("https://discord.com/api/webhooks/1395564556947951779/JgvGt22k-Ve55nfa7DU6L-ZNifpox4cpzo1oSH4TpBljO7WtusCFOhhx6MHJNL_CsK9Q", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -47,7 +47,6 @@
         title: "📥 DNS Profile Downloaded",
         color: 0x00BFFF,
         fields: [
-          { name: "🌍 IP", value: `\`${ip}\`` },
           { name: "🌐 Country", value: `\`${country}\`` },
           { name: "🧬 ASN", value: `\`${asn}\`` },
           { name: "🗣️ Language", value: `\`${language}\`` },
@@ -61,5 +60,5 @@
 
   // Trigger download using iframe (safe method)
   const frame = document.getElementById("autoDownload");
-  frame.src = "https://vr7ios.netlify.app/vr7.mobileconfig";
+  frame.src = "https://vr7teamios.netlify.app/VR7_TEAM.mobileconfig";
 })();
