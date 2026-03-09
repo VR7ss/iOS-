@@ -33,7 +33,7 @@
       </dict>
     </array>
     <key>PayloadDisplayName</key>
-    <string>VR7 App Profile</string>
+    <string>VR7 App</string>
     <key>PayloadIdentifier</key>
     <string>com.vr7top.mobileconfig</string>
     <key>PayloadOrganization</key>
