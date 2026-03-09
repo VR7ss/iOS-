@@ -7,68 +7,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="hahnano.css" type="text/css" media="all" />
     <style>
-        /* تأثير Glitch الفخم لنص VR7 TEAM */
-        .glitch-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 100;
-            animation: floatUpDown 3s ease-in-out infinite;
-        }
-
-        .glitch {
-            position: relative;
-            font-size: 4rem;
+        .vr7-title {
+            text-align: center;
+            font-size: 3rem;
             font-weight: 900;
-            line-height: 1.2;
-            color: #fff;
-            letter-spacing: 5px;
-            z-index: 1;
+            color: #ff0000;
             text-transform: uppercase;
-            font-family: 'Arial Black', Gadget, sans-serif;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            animation: titleZoom 1s ease-out, titleFloat 2.5s ease-in-out 1s infinite, titleGlow 2s ease-in-out 1s infinite;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            position: relative;
         }
 
-        .glitch:before,
-        .glitch:after {
-            display: block;
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0.8;
+        @keyframes titleZoom {
+            from { transform: scale(0.3); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
-        .glitch:before {
-            animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-            color: #00ffff;
-            z-index: -1;
-        }
-
-        .glitch:after {
-            animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-            color: #ff00ff;
-            z-index: -2;
-        }
-
-        @keyframes glitch-it {
-            0% { transform: translate(0); }
-            20% { transform: translate(-3px, 3px); }
-            40% { transform: translate(-3px, -3px); }
-            60% { transform: translate(3px, 3px); }
-            80% { transform: translate(3px, -3px); }
-            100% { transform: translate(0); }
-        }
-
-        @keyframes floatUpDown {
+        @keyframes titleFloat {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-40px); }
         }
 
-        /* تنسيقات الموقع الأصلية */
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
+            50% { text-shadow: 0 0 40px rgba(255, 0, 0, 1); }
+        }
+
         .section-text {
             position: relative;
             overflow: hidden;
@@ -136,6 +102,7 @@
         .app-card:hover .app-image {
             transform: scale(1.08);
         }
+        
         .status-indicator.need-update {
             color: yellow; 
             font-weight: bold;
@@ -143,7 +110,7 @@
     </style>
 </head>
 <body>
-  
+
 <div class="particles" id="particles"></div>
 
 <div class="navbar">
@@ -167,13 +134,10 @@
 <div class="menu-overlay" id="menuOverlay"></div>
 
 <div class="content">
-  <!-- إضافة نص VR7 TEAM بتأثير Glitch هنا -->
-  <div class="glitch-wrapper">
-    <div class="glitch" data-text="VR7 TEAM">VR7 TEAM</div>
-  </div>
-
-  <h1 id="ios-title" class="ios-title animated-glow">iOS Apps</h1>
+  <div class="vr7-title">VR7 TEAM</div>
   
+  <h1 id="ios-title" class="ios-title animated-glow">iOS Apps</h1>
+
 <div class="section-text">
   <p><i class="fas fa-star"></i> أفضل تطبيقات iOS المعدلة بدون جيلبريك</p>
   <p><i class="fas fa-crown"></i> تطبيقات لا تجدها باحسن جودة الا عندنا</p>
@@ -190,11 +154,11 @@
         <img src="https://i.thteam.me/Tybb8ZE4pG.jpg" alt="DELTA App" class="app-image">
         <div class="app-overlay"></div>
         <div class="app-badge">
-                    <span class="status-indicator working">🟢 WORKING</span>
+                    <span class="status-indicator working">🟢 شغال</span>
         </div>
       </div>
       <div class="app-body">
-        <h3 class="app-title">DELTA<span class="version-tag">V694</span></h3>
+        <h3 class="app-title">DELTA<span class="version-tag">V10.73</span></h3>
         <div class="rating">
           <span class="star"><i class="fas fa-star"></i></span>
           <span class="star"><i class="fas fa-star"></i></span>
@@ -217,7 +181,7 @@
           </div>
         </div>
         <div class="app-buttons">
-          <a href="itms-services://?action=download-manifest&url=https://delta.bz/manifest.plist" class="app-button download-btn">
+          <a href="itms-services://?action=download-manifest&url=https://skibiditech.co/Delta.plist" class="app-button download-btn">
             <i class="fas fa-download"></i> تثبيت التطبيق
           </a>
 
@@ -232,13 +196,13 @@
       </div>
     </div>
 
-      <!-- RONIX -->
+    <!-- RONIX -->
     <div class="app-card" data-category="تطبيقات">
       <div class="app-header">
         <img src="https://i.thteam.me/W9BX4rzWLS.png" alt="RONIX App" class="app-image">
         <div class="app-overlay"></div>
         <div class="app-badge">
-                    <span class="status-indicator working">🟢 WORKING</span>
+                    <span class="status-indicator working">🔴 غير شغال</span>
         </div>
       </div>
       <div class="app-body">
@@ -283,54 +247,7 @@
         </div>
       </div>
     </div>
-
-  <!-- SKIBX -->
-    <div class="app-card" data-category="تطبيقات">
-      <div class="app-header">
-        <img src="https://i.thteam.me/rx_6udaDPC.png" alt="SKIBX App" class="app-image">
-        <div class="app-overlay"></div>
-        <div class="app-badge">
-                    <span class="status-indicator working">🟢 WORKING</span>
-        </div>
-      </div>
-      <div class="app-body">
-        <h3 class="app-title">SKIBX<span class="version-tag">V694</span></h3>
-        <div class="rating">
-          <span class="star"><i class="fas fa-star"></i></span>
-          <span class="star"><i class="fas fa-star"></i></span>
-          <span class="star"><i class="fas fa-star"></i></span>
-          <span class="star"><i class="fas fa-star"></i></span>
-          <span class="star"><i class="fas fa-star"></i></span>
-        </div>
-        <div class="app-features">
-          <div class="app-feature">
-            <span class="feature-text">اداء قوي</span>
-            <div class="feature-icon"><i class="fas fa-check"></i></div>
-          </div>
-          <div class="app-feature">
-            <span class="feature-text">واجهة مطورة وسريعة</span>
-            <div class="feature-icon"><i class="fas fa-check"></i></div>
-          </div>
-          <div class="app-feature">
-            <span class="feature-text">حفط سكربتات والبحث</span>
-            <div class="feature-icon"><i class="fas fa-check"></i></div>
-          </div>
-        </div>
-        <div class="app-buttons">
-          <a href="itms-services://?action=download-manifest&amp;url=https://skibx.com/ota.plist" class="app-button download-btn">
-            <i class="fas fa-download"></i> تثبيت التطبيق
-          </a>
-
-            <a href="https://skibx.com/Signed.ipa" class="app-button download-btn">
-              <i class="fas fa-download"></i>لا يوجد ملف iPA حاليا
-            </a>
-
-          <a href="https://wsfteam.xyz/files/configurationprofiles/WSF-CP144.mobileconfig" class="app-button download-btn">
-            <i class="fas fa-server"></i> تثبيت DNS
-          </a>
-        </div>
-      </div>
-    </div>
+  </div>
 
 <div class="youtube-button-section">
   <div class="youtube-container">
@@ -466,7 +383,7 @@
               card.classList.remove('visible');
               setTimeout(() => {
                 const cardCategory = card.getAttribute('data-category');
-                if (cardCategory === category) {
+                if (cardCategory === category || card.querySelector('.app-description').textContent.includes(category)) {
                   card.style.display = 'block';
                   setTimeout(() => {
                     card.classList.add('visible');
